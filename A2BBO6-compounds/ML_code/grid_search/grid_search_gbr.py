@@ -33,7 +33,7 @@ params=[
      'min_samples_split':[1,2,4,6,8],
      'min_samples_leaf':[1,2,3,4],}
 ]
-grid_search=GridSearchCV(model,param_grid=params,cv=KFold(5,shuffle=True),scoring='r2',verbose=1)
+grid_search=GridSearchCV(model,param_grid=params,cv=KFold(10,shuffle=True),scoring='r2',verbose=1)
 grid_search.fit(train_X, train_Y)
 with open('GBR_program.txt', 'a', encoding='utf-8') as f:
     f.write(str(grid_search.best_estimator_._program))

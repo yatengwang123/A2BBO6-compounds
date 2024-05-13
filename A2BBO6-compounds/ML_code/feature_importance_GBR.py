@@ -6,7 +6,6 @@ from sklearn import preprocessing
 from sklearn.metrics import r2_score
 import json
 
-
 df = pd.read_csv('train_data_set.csv')
 
 df.drop(['A_site_Elements', 'B_site_Elements', "B'_site_Elements", 'O_site_Elements', 'composition', 'composition_oxid',
